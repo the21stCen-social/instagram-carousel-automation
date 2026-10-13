@@ -1,0 +1,78 @@
+name: Daily Instagram carousel
+
+permissions:
+  contents: write   # commits the history file and pushes slide images to the 'media' branch
+
+on:
+  schedule:
+    # Daily at 04:00 UTC (09:30 IST). The bot adds a carousel only when none of its
+    # own carousels is already waiting in Buffer, so running daily is safe.
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (draft + render only, nothing uploaded or queued)"
+        type: choice
+        options: ["1", "0"]
+        default: "1"
+
+concurrency:
+  group: carousel-bot
+  cancel-in-progress: false
+
+jobs:
+  carousel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      # Scheduled runs are live; manual runs use the dry_run choice (default 1).
+      DRY_RUN: ${{ github.event_name == 'schedule' && '0' || inputs.dry_run }}
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+      GEMINI_FALLBACK_MODEL: ${{ vars.GEMINI_FALLBACK_MODEL }}
+      CARD_NAME: ${{ vars.CARD_NAME }}
+      CARD_HANDLE: ${{ vars.CARD_HANDLE }}
+      CARD_FOOTER: ${{ vars.CARD_FOOTER }}
+      INSTAGRAM_POST_TYPE: ${{ vars.INSTAGRAM_POST_TYPE }}
+      INSTAGRAM_AI_LABEL: ${{ vars.INSTAGRAM_AI_LABEL }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Draft the carousel and render the slides
+        run: python carousel_bot.py prepare
+
+      - name: Upload the slides to the media branch
+        if: env.DRY_RUN != '1'
+        run: python media.py
+
+      - name: Add the carousel to the Buffer queue
+        if: env.DRY_RUN != '1'
+        run: python carousel_bot.py publish
+
+      - name: Save a preview of the slides (dry run only)
+        if: env.DRY_RUN == '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: carousel-preview
+          path: out/
+          if-no-files-found: ignore
+
+      - name: Commit updated history
+        if: always() && env.DRY_RUN != '1'
+        run: |
+          git config user.name "gamedev-bot"
+          git config user.email "actions@github.com"
+          git add -A -- posted_history.json || true
+          git add -A -- pending_post.json || true
+          git diff --cached --quiet || git commit -m "chore: update carousel history [skip ci]"
+          git push || true
