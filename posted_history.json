@@ -1,7 +1,20 @@
 {
-  "topics": [],
+  "topics": [
+    "Game development learning roadmap"
+  ],
   "links": [],
-  "category_index": 0,
-  "recent_backgrounds": [],
-  "bot_posts": {}
+  "category_index": 1,
+  "recent_backgrounds": [
+    "e986beeb585ff0103c41b1c076d9af5b.webp",
+    "ZJW4jdJASCeMadZP7ZV88w.webp",
+    "9f67ac8e61dde7cc2c1fe9c28a4eba93.webp",
+    "cool-male-casual-game-character-pose_899449-620126.webp",
+    "images 1.jpg",
+    "images.jpg"
+  ],
+  "bot_posts": {
+    "instagram": [
+      "6ace60d6d9d45db80a0709ff"
+    ]
+  }
 }
