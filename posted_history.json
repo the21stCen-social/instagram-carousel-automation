@@ -1,20 +1,29 @@
 {
   "topics": [
-    "Game development learning roadmap"
+    "Game development learning roadmap",
+    "Managing indie studio issues"
   ],
-  "links": [],
-  "category_index": 1,
+  "links": [
+    "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues"
+  ],
+  "category_index": 2,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
     "9f67ac8e61dde7cc2c1fe9c28a4eba93.webp",
     "cool-male-casual-game-character-pose_899449-620126.webp",
     "images 1.jpg",
-    "images.jpg"
+    "images.jpg",
+    "images game.jpg",
+    "360_F_798141853_35YfzZUgJvOC4K3GbJ2AHdfXbhlr0wKQ.webp",
+    "ab8a2d373b3a65f701b1b4f52cd3e667.webp",
+    "Gemini_Generated_Image_7z9x407z9x407z9x.jpg",
+    "c0470bf62f8b53c3a8cbed790013000ad46a51e5-1920x1080.jpeg"
   ],
   "bot_posts": {
     "instagram": [
-      "6ace60d6d9d45db80a0709ff"
+      "6ace60d6d9d45db80a0709ff",
+      "6ad05b867b2b6a2866e40513"
     ]
   }
 }
