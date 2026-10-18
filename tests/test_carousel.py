@@ -25,13 +25,19 @@ ORG = "o" * 24
 REAL = {k: getattr(cb, k) for k in ("gemini_generate", "buffer_request", "url_is_image", "fetch_news", "http_post_json")}
 
 
-def good(topic="Why scope creep kills indie games", n=5):
+def good(topic="Why scope creep kills indie games", n=8):
     texts = ["Scope creep is the quiet killer of indie games",
              "1) Write your core loop in one sentence before anything else",
              "2) Cut every feature that does not serve that loop",
              "3) Ship a tiny playable version before adding anything new",
-             "Which feature in your project could you cut today?",
-             "Finish small games first, then grow your ambitions"][:n]
+             "4) Playtest with strangers early, because friends are too polite",
+             "5) Set a hard deadline and cut scope to meet it",
+             "6) Keep a parking lot list for ideas that can wait",
+             "7) Celebrate finishing small games before starting big ones",
+             "8) Review what you cut and what players never missed",
+             "9) Treat every new idea as a cost, not a gift",
+             "10) Remember that a finished small game beats an unfinished epic",
+             "Which feature in your project could you cut today?"][:n]
     return json.dumps({"skip": False, "skip_reason": "", "topic": topic, "slides": texts,
                        "caption": "Most unfinished games die from too many ideas, not too few. "
                                   "Save this for your next project plan. What is the one feature you keep refusing to cut?",
@@ -52,7 +58,7 @@ class Env:
         for k in ("GITHUB_REPOSITORY", "IMAGES_BASE_URL", "BUFFER_CHANNEL_INSTAGRAM", "BUFFER_ORG_ID", "DRY_RUN"):
             os.environ.pop(k, None)
         os.environ.update({"BUFFER_API_KEY": "k\n", "GEMINI_API_KEY": "g\n", "GITHUB_REPOSITORY": "the21stCen-social/instagram-carousel-automation"})
-        cb.QUEUE_TARGET, cb.MAX_SLIDES, cb.CARD_FOOTER = 1, 7, True
+        cb.QUEUE_TARGET, cb.MIN_SLIDES, cb.MAX_SLIDES, cb.CARD_FOOTER = 1, 7, 12, True
         self.created, self.prompts, self.checked = [], [], []
         self.waiting = waiting or []
         self.channels = [{"id": IG, "service": "instagram", "name": "gamedevdaily", "isDisconnected": False,
@@ -135,8 +141,11 @@ def _(tmp):
         return cb.validate_content(d, ["Old topic"], allow_product=False)
 
     assert check()[0]["topic"].startswith("Why scope")
-    assert "need 3 to 7" in check(slides=base["slides"][:2])[1]
-    assert "need 3 to 7" in check(slides=base["slides"] * 2)[1]
+    assert "need 7 to 12" in check(slides=base["slides"][:6])[1]
+    assert "need 7 to 12" in check(slides=base["slides"] * 2)[1]
+    assert check(slides=json.loads(good(n=7))["slides"])[0]          # 7 is allowed
+    assert check(slides=json.loads(good(n=12))["slides"])[0]                        # 12 is allowed
+    assert "need 7 to 12" in check(slides=json.loads(good(n=12))["slides"] + ["One more slide than the limit allows"])[1]
     assert "must have 5 to 15" in check(slides=["Too short"] + base["slides"][1:])[1]
     assert "must have 5 to 15" in check(slides=["word " * 16] + base["slides"][1:])[1]
     assert "hashtag, link or emoji" in check(slides=["Check https://x.io for the details today"] + base["slides"][1:])[1]
@@ -159,13 +168,13 @@ def _(tmp):
     out, code = e.run("prepare")
     assert code == 0, out
     pend = json.loads(cb.PENDING_FILE.read_text())
-    assert pend["category"] == "learn" and len(pend["files"]) == 5 and len(pend["slides"]) == 5
+    assert pend["category"] == "learn" and len(pend["files"]) == 8 and len(pend["slides"]) == 8
     for f in pend["files"]:
         assert (Path(tmp) / f).is_file()
     assert pend["caption"].endswith("#gamedev #indiedev #gamedesign #unity #godot #indiegame")
     h = e.history()
     assert h["topics"] == ["Why scope creep kills indie games"] and h["category_index"] == 1
-    assert len(h["recent_backgrounds"]) == 5
+    assert len(h["recent_backgrounds"]) == 8
     assert "Instagram: 0 of the bot's carousels waiting" in out
     assert len(e.prompts) == 1 and "game development" in e.prompts[0]
 
@@ -209,14 +218,14 @@ def _(tmp):
     inp = e.created[0]
     assert inp["channelId"] == IG and inp["mode"] == "addToQueue" and inp["schedulingType"] == "automatic"
     assert inp["aiAssisted"] is True and inp["metadata"] == {"instagram": {"type": "post", "shouldShareToFeed": True, "isAiGenerated": False}}
-    assert len(inp["assets"]) == 5
+    assert len(inp["assets"]) == 8
     first = inp["assets"][0]["image"]
     assert first["url"].startswith("https://raw.githubusercontent.com/the21stCen-social/instagram-carousel-automation/media/")
     assert first["url"].endswith("/slide-1.jpg") and first["metadata"]["altText"].startswith("Slide 1: ")
     assert inp["text"].startswith("Most unfinished games die")
     assert not cb.PENDING_FILE.exists()
     assert e.history()["bot_posts"]["instagram"] == ["p" * 23 + "1"]
-    assert len(e.checked) == 5
+    assert len(e.checked) == 8
 
 
 @t("8 publish: Buffer rejects it -> exit 1, pending discarded (never retried blindly), nothing recorded")
@@ -313,7 +322,7 @@ def _(tmp):
     os.environ.pop("DRY_RUN")
     assert code == 0 and "DRY_RUN=1 set" in out and not e.created
     assert not cb.PENDING_FILE.exists() and e.history() is None
-    assert len(list((Path(tmp) / "out").rglob("*.jpg"))) == 5
+    assert len(list((Path(tmp) / "out").rglob("*.jpg"))) == 8
 
 
 @t("16 gemini fallback model and env_or")

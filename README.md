@@ -2,7 +2,7 @@
 
 Posts one game development carousel a day to Instagram, at no cost. New here? Follow [SETUP.md](SETUP.md).
 
-Each day a GitHub Action picks the next topic, Gemini writes 3–7 short slides (5–15 words each) and a caption, Pillow draws each slide as a white rounded "tweet-style" card over one of your background photos, and the finished carousel goes into your Buffer queue for Instagram.
+Each day a GitHub Action picks the next topic, Gemini writes 7–12 short slides (5–15 words each; it picks the count from how much the topic needs) and a caption, Pillow draws each slide as a white rounded "tweet-style" card over one of your background photos, and the finished carousel goes into your Buffer queue for Instagram.
 
 Topic rotation (one per day): how to start in game dev, game dev news, engine tips (Unity, Unreal, Godot, GameMaker), game design lessons, pros and cons of a dev choice, indie life, careers, original quotes. News days use a real, fresh story from the RSS feeds and nothing invented.
 

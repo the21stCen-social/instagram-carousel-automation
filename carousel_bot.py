@@ -53,8 +53,8 @@ CARD_NAME = env_or("CARD_NAME", "the21stCen")
 CARD_HANDLE = env_or("CARD_HANDLE", "@the21stCen")
 CARD_FOOTER = env_or("CARD_FOOTER", "1") != "0"        # "Follow @handle ..." on the last slide
 QUEUE_TARGET = int(env_or("QUEUE_TARGET", "1"))          # own carousels allowed to wait in the queue
-MAX_SLIDES = int(env_or("MAX_SLIDES", "7"))
-MIN_SLIDES = 3
+MAX_SLIDES = int(env_or("MAX_SLIDES", "12"))
+MIN_SLIDES = int(env_or("MIN_SLIDES", "7"))
 MIN_WORDS, MAX_WORDS = 5, 15
 MAX_AGE_DAYS = float(env_or("MAX_AGE_DAYS", "2"))
 MIN_SUMMARY_CHARS = int(env_or("MIN_SUMMARY_CHARS", "120"))
@@ -74,6 +74,18 @@ CATEGORIES = {
     "indie_life": "indie developer life: scoping a project, finishing games, marketing a small game, game jams, or launching on Steam or itch.io",
     "career": "game industry careers: skills to learn, building a portfolio, getting a first job, or freelancing",
     "quotes": "an ORIGINAL short, thought-provoking line about making games (never attributed to any real person)",
+}
+# Suggested slide range per category. The model picks the exact number inside it from how much the
+# topic really needs; the hard limits are MIN_SLIDES / MAX_SLIDES.
+SLIDE_GUIDE = {
+    "learn": (9, 12),
+    "news": (7, 9),
+    "engine_tips": (8, 10),
+    "game_design": (8, 10),
+    "pros_cons": (9, 12),
+    "indie_life": (8, 11),
+    "career": (9, 12),
+    "quotes": (7, 8),
 }
 CATEGORY_ORDER = ["learn", "news", "engine_tips", "game_design", "pros_cons", "indie_life", "career", "quotes"]
 PRODUCT_CATEGORIES = set()   # categories that may promote your own game or product (none by default)
@@ -498,12 +510,19 @@ def build_prompt(category: str, story: dict | None, recent_topics: list, allow_p
         parts.append(PRODUCT_FACTS)
     if recent_topics:
         parts.append("Topics already covered recently (do not repeat them):\n- " + "\n- ".join(recent_topics[-25:]))
+    lo, hi = SLIDE_GUIDE.get(category, (MIN_SLIDES, MAX_SLIDES))
+    lo, hi = max(lo, MIN_SLIDES), min(hi, MAX_SLIDES)
+    if lo > hi:
+        lo, hi = MIN_SLIDES, MAX_SLIDES
     parts.append(
-        f"Slides: {MIN_SLIDES} to {MAX_SLIDES}; choose the number the topic needs. EVERY slide is {MIN_WORDS} to "
-        f"{MAX_WORDS} words, one idea each, written like a short punchy line shown on a card. Slide 1 is a "
-        "scroll-stopping hook that creates curiosity. Middle slides give the substance (numbered like '1) ...' "
-        "when it is a list). The last slide is a takeaway or a question that invites comments or saves. "
-        "No emoji, hashtags or links in slides.")
+        f"Slides: you must write between {MIN_SLIDES} and {MAX_SLIDES}; for this topic aim for {lo} to {hi}. "
+        "Choose the exact number from how much the topic needs to be delivered clearly: a simple idea gets fewer "
+        "slides, a multi-step roadmap or a list of points gets more. Never pad: every slide must add something new "
+        "and no two slides may repeat the same point. "
+        f"EVERY slide is {MIN_WORDS} to {MAX_WORDS} words, one idea each, written like a short punchy line shown on "
+        "a card. Slide 1 is a scroll-stopping hook that creates curiosity. Middle slides give the substance in a "
+        "logical order (numbered like '1) ...' when it is a list or steps). The last slide is a takeaway or a "
+        "question that invites comments or saves. No emoji, hashtags or links in slides.")
     caption_rule = ("The caption may end with a soft mention of our project and 'Link in bio.' because this topic "
                     "is about what we build. " if allow_product else
                     "Do not say 'link in bio'. ")
@@ -513,7 +532,8 @@ def build_prompt(category: str, story: dict | None, recent_topics: list, allow_p
     parts.append(
         'Return JSON: {"skip": false, "skip_reason": "", "topic": "<short label, max 8 words>", '
         '"slides": ["..."], "caption": "...", "hashtags": ["6 to 10 relevant tags without the # sign"]}. '
-        'If the material is too thin to make a trustworthy carousel, return {"skip": true, "skip_reason": "..."}.')
+        f'If the material is too thin to fill {MIN_SLIDES} slides without padding or inventing facts, return '
+        '{"skip": true, "skip_reason": "..."}.')
     if feedback:
         parts.append(f"Your previous answer was rejected: {feedback} Fix that and answer again.")
     return "\n\n".join(parts)
