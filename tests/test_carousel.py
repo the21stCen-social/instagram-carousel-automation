@@ -174,7 +174,7 @@ def _(tmp):
     assert pend["caption"].endswith("#gamedev #indiedev #gamedesign #unity #godot #indiegame")
     h = e.history()
     assert h["topics"] == ["Why scope creep kills indie games"] and h["category_index"] == 1
-    assert len(h["recent_backgrounds"]) == 8
+    assert len(h["recent_backgrounds"]) == 3        # 3 photos, each recorded once
     assert "Instagram: 0 of the bot's carousels waiting" in out
     assert len(e.prompts) == 1 and "game development" in e.prompts[0]
 
@@ -371,17 +371,31 @@ def _(tmp):
     assert cb.env_or("X_EMPTY", "d") == "v"
 
 
-@t("17 background picking: no adjacent repeats, recent photos avoided, fallback when none")
+@t("17 background picking: no repeats inside a carousel, whole folder rotates, new photos first, no adjacent repeats")
 def _(tmp):
-    photos = [Path(f"p{i}.jpg") for i in range(6)]
-    for seed in range(20):
-        picks = render.pick_backgrounds(photos, 5, ["p0.jpg", "p1.jpg"], random.Random(seed))
-        assert all(a != b for a, b in zip(picks, picks[1:])), picks
-        assert not {"p0.jpg", "p1.jpg"} & {p.name for p in picks}, picks
-    two = render.pick_backgrounds(photos[:2], 7, [], random.Random(1))
-    assert len(two) == 7 and all(a != b for a, b in zip(two, two[1:]))
-    one = render.pick_backgrounds(photos[:1], 3, [], random.Random(1))
-    assert len(one) == 3
+    photos = [Path(f"p{i}.jpg") for i in range(15)]
+    for seed in range(50):
+        picks = render.pick_backgrounds(photos, 12, [], random.Random(seed))
+        assert len(set(picks)) == 12, picks                          # 12 slides, 12 different photos
+    # rotation: each carousel uses the longest-unused photos, so every photo gets a turn before any repeats
+    recent, seen = [], []
+    for day in range(5):
+        picks = render.pick_backgrounds(photos, 9, recent, random.Random(day))
+        assert len(set(picks)) == 9
+        names = [p.name for p in picks]
+        recent = [n for n in recent if n not in names] + names
+        seen += names
+    assert len(set(seen[:18])) == 15, "two carousels (9 + 9 slides) must cover all 15 photos"
+    # a photo that was never used (newly added) is always picked before ones used before
+    picks = render.pick_backgrounds(photos + [Path("brand_new.jpg")], 3, [p.name for p in photos], random.Random(3))
+    assert Path("brand_new.jpg") in picks
+    # fewer photos than slides: cycles, still no adjacent repeat
+    for seed in range(30):
+        two = render.pick_backgrounds(photos[:2], 7, [], random.Random(seed))
+        assert len(two) == 7 and all(a != b for a, b in zip(two, two[1:])), two
+        five = render.pick_backgrounds(photos[:5], 12, [], random.Random(seed))
+        assert len(five) == 12 and all(a != b for a, b in zip(five, five[1:])), five
+    assert len(render.pick_backgrounds(photos[:1], 3, [], random.Random(1))) == 3
     assert render.pick_backgrounds([], 4, [], random.Random(1)) == [None] * 4
 
 

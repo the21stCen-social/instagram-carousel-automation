@@ -180,7 +180,7 @@ def load_history() -> dict:
 def save_history(history: dict) -> None:
     history["topics"] = history["topics"][-80:]
     history["links"] = history["links"][-300:]
-    history["recent_backgrounds"] = history["recent_backgrounds"][-40:]
+    history["recent_backgrounds"] = history["recent_backgrounds"][-300:]
     history["bot_posts"] = {k: v[-50:] for k, v in history.get("bot_posts", {}).items()}
     HISTORY_FILE.write_text(json.dumps(history, indent=2) + "\n", encoding="utf-8")
 
@@ -675,7 +675,9 @@ def prepare(dry_run: bool) -> int:
         return 0
 
     history["topics"].append(content["topic"])
-    history["recent_backgrounds"] += [p.name for p in chosen if p]
+    used = list(dict.fromkeys(p.name for p in chosen if p))
+    # Oldest first, newest last, each photo once: this ordering is what lets the picker rotate through them all.
+    history["recent_backgrounds"] = [n for n in history["recent_backgrounds"] if n not in used] + used
     save_history(history)
     save_pending({"id": carousel_id, "category": category, "topic": content["topic"], "caption": caption,
                   "slides": content["slides"], "files": files, "created": datetime.now(timezone.utc).isoformat()})

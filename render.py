@@ -42,7 +42,10 @@ def _font(name: str, size: int) -> ImageFont.FreeTypeFont:
 def list_backgrounds(folder: Path) -> list:
     if not folder.is_dir():
         return []
-    return sorted(p for p in folder.iterdir() if p.suffix.lower() in IMAGE_EXTS)
+    exts = set(IMAGE_EXTS)
+    if ".avif" in Image.registered_extensions():     # newer Pillow builds can read AVIF
+        exts.add(".avif")
+    return sorted(p for p in folder.iterdir() if p.suffix.lower() in exts)
 
 
 def _cover(img: Image.Image) -> Image.Image:
@@ -194,16 +197,27 @@ def render_slide(text: str, index: int, total: int, out_path: Path, *, backgroun
 
 
 def pick_backgrounds(photos: list, count: int, recent: list, rng: random.Random) -> list:
-    """One background per slide: avoid recently used photos and never repeat one
-    on adjacent slides. Returns Paths, or None entries (fallback) when there are no photos."""
+    """One background per slide, rotating through the whole folder.
+
+    Photos are ranked by how long ago they were used (`recent` is ordered oldest to newest): photos
+    never used come first (so newly added ones are used straight away), then the longest-unused.
+    The `count` top-ranked photos are used, so a carousel never repeats a photo while the folder has
+    enough of them, and every photo gets a turn before any is reused. If there are fewer photos
+    than slides, the folder is cycled again, never putting the same photo on adjacent slides.
+    Returns Paths, or None entries (fallback) when there are no photos."""
     if not photos:
         return [None] * count
-    recent_set = set(recent)
-    pool = [p for p in photos if p.name not in recent_set] or list(photos)
-    rng.shuffle(pool)
+    last_used = {name: i for i, name in enumerate(recent)}      # later index = used more recently
+    order = sorted(photos, key=lambda p: (last_used.get(p.name, -1), rng.random()))
     chosen = []
-    for i in range(count):
-        options = [p for p in pool if not chosen or p != chosen[-1]] or list(photos)
-        pick = next((p for p in options if p not in chosen), None) or rng.choice(options)
-        chosen.append(pick)
+    while len(chosen) < count:
+        block = order[:count - len(chosen)]
+        rng.shuffle(block)
+        if chosen and block[0] == chosen[-1]:
+            swap = next((i for i, p in enumerate(block) if p != chosen[-1]), None)
+            if swap is not None:
+                block[0], block[swap] = block[swap], block[0]
+            elif len(order) > 1:
+                block = [next(p for p in order if p != chosen[-1])]
+        chosen += block
     return chosen

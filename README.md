@@ -21,7 +21,7 @@ Topic rotation (one per day): how to start in game dev, game dev news, engine ti
    - `INSTAGRAM_POST_TYPE` (default `post`; if Buffer refuses multi-image posts, set `carousel`)
    - `INSTAGRAM_AI_LABEL` (default `0`; `1` marks every post with Instagram's "AI info" label)
    - `BUFFER_CHANNEL_INSTAGRAM` (only if you have several Instagram channels)
-5. **Photos.** Put your background images (JPG/PNG/WebP) in `backgrounds/`. Without them the bot uses plain dark gradients. Recently used photos are avoided and no photo repeats on adjacent slides. Optionally add `assets/logo.png` as the round avatar on the card.
+5. **Photos.** Put your background images (JPG/PNG/WebP) in `backgrounds/`. Without them the bot uses plain dark gradients. Photos rotate: a carousel never repeats a photo while the folder has enough of them, never-used (new) photos go first, and every photo gets a turn before any is reused. Aim for at least 12 photos; fewer means repeats (never on adjacent slides). AVIF files work only if your Pillow build can read them. Optionally add `assets/logo.png` as the round avatar on the card.
 6. **Workflow permissions.** Settings → Actions → General → Workflow permissions → *Read and write* (the bot pushes the `media` branch and commits its history file).
 
 ## Running
