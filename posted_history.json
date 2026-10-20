@@ -6,12 +6,13 @@
     "The Principle of Game Juice",
     "Solo development versus team development",
     "Finishing small indie games",
-    "Getting your first game industry job"
+    "Getting your first game industry job",
+    "The philosophy of game design"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues"
   ],
-  "category_index": 7,
+  "category_index": 0,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -33,29 +34,27 @@
     "360_F_798141853_35YfzZUgJvOC4K3GbJ2AHdfXbhlr0wKQ.webp",
     "9f67ac8e61dde7cc2c1fe9c28a4eba93.webp",
     "images.jpg",
-    "codmw.jpg",
-    "ghost.jpg",
     "Inzoi.jpg",
     "mc.jpg",
-    "ff.jpg",
     "Metro.jpg",
     "mc.jpg",
-    "ff.jpg",
     "Metro.jpg",
-    "ff.jpg",
     "mc.jpg",
     "Inzoi.jpg",
-    "Sell KNight.jpg",
-    "Naraka.jpg",
-    "dredge.jpeg",
-    "gow.jpg",
-    "division.jpg",
     "fallout.jpg",
     "acorsa.jpg",
     "rdr.jpg",
     "tomdrider.jpg",
     "c0470bf62f8b53c3a8cbed790013000ad46a51e5-1920x1080.jpeg",
-    "battlefild.jpg"
+    "battlefild.jpg",
+    "codmw.jpg",
+    "Sell KNight.jpg",
+    "dredge.jpeg",
+    "ff.jpg",
+    "division.jpg",
+    "gow.jpg",
+    "Naraka.jpg",
+    "ghost.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -64,7 +63,8 @@
       "6ad1e3b19597cd166274291a",
       "6ad32ea20a208cb3230fe302",
       "6ad45b8e0a208cb323502cfe",
-      "6ad45dd20b0d72757a0bda80"
+      "6ad45dd20b0d72757a0bda80",
+      "6ad72ef895f8ed1a3c825286"
     ]
   }
 }
