@@ -9,13 +9,14 @@
     "Getting your first game industry job",
     "The philosophy of game design",
     "Game development prototyping habits",
-    "RPG Maker U2U Feature Overview"
+    "RPG Maker U2U Feature Overview",
+    "Godot node system architecture"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
     "https://80.lv/articles/interview-rpg-maker-u2u-lets-you-build-hd-2d-worlds-without-learning-3d/"
   ],
-  "category_index": 2,
+  "category_index": 3,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -58,13 +59,14 @@
     "dredge.jpeg",
     "acorsa.jpg",
     "tomdrider.jpg",
-    "ff2.jpg",
-    "halo.jpg",
-    "ff1.jpg",
-    "bow.jpg",
+    "trlg.jpg",
     "reinc.jpg",
+    "halo.jpg",
+    "ff2.jpg",
+    "reinc2.jpg",
+    "ff1.jpg",
     "got.jpg",
-    "trlg.jpg"
+    "bow.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -76,7 +78,8 @@
       "6ad45dd20b0d72757a0bda80",
       "6ad72ef895f8ed1a3c825286",
       "6ad8805472c27851146906be",
-      "6ad9d266e6aee73a2b157fea"
+      "6ad9d266e6aee73a2b157fea",
+      "6adb22e3b548d29b74038747"
     ]
   }
 }
