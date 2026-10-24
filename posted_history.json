@@ -10,13 +10,14 @@
     "The philosophy of game design",
     "Game development prototyping habits",
     "RPG Maker U2U Feature Overview",
-    "Godot node system architecture"
+    "Godot node system architecture",
+    "The Principle of Difficulty Curves"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
     "https://80.lv/articles/interview-rpg-maker-u2u-lets-you-build-hd-2d-worlds-without-learning-3d/"
   ],
-  "category_index": 3,
+  "category_index": 4,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -66,7 +67,16 @@
     "reinc2.jpg",
     "ff1.jpg",
     "got.jpg",
-    "bow.jpg"
+    "bow.jpg",
+    "kda.jpg",
+    "mario.jpg",
+    "dsq.jpg",
+    "ror.jpg",
+    "tr.jpg",
+    "hfw.jpg",
+    "wd2.jpg",
+    "control.jpg",
+    "wd.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -79,7 +89,8 @@
       "6ad72ef895f8ed1a3c825286",
       "6ad8805472c27851146906be",
       "6ad9d266e6aee73a2b157fea",
-      "6adb22e3b548d29b74038747"
+      "6adb22e3b548d29b74038747",
+      "6adc6df43d5b27036b74aa42"
     ]
   }
 }
