@@ -11,13 +11,14 @@
     "Game development prototyping habits",
     "RPG Maker U2U Feature Overview",
     "Godot node system architecture",
-    "The Principle of Difficulty Curves"
+    "The Principle of Difficulty Curves",
+    "Advantages and disadvantages of pixel art"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
     "https://80.lv/articles/interview-rpg-maker-u2u-lets-you-build-hd-2d-worlds-without-learning-3d/"
   ],
-  "category_index": 4,
+  "category_index": 5,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -68,15 +69,16 @@
     "ff1.jpg",
     "got.jpg",
     "bow.jpg",
-    "kda.jpg",
-    "mario.jpg",
-    "dsq.jpg",
-    "ror.jpg",
     "tr.jpg",
-    "hfw.jpg",
+    "dsq.jpg",
+    "kda.jpg",
+    "ac3.jpg",
+    "wd.jpg",
+    "ror.jpg",
     "wd2.jpg",
-    "control.jpg",
-    "wd.jpg"
+    "mario.jpg",
+    "hfw.jpg",
+    "control.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -90,7 +92,8 @@
       "6ad8805472c27851146906be",
       "6ad9d266e6aee73a2b157fea",
       "6adb22e3b548d29b74038747",
-      "6adc6df43d5b27036b74aa42"
+      "6adc6df43d5b27036b74aa42",
+      "6addc4056887a2efc1f7343b"
     ]
   }
 }
