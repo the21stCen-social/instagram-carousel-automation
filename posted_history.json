@@ -13,13 +13,14 @@
     "Godot node system architecture",
     "The Principle of Difficulty Curves",
     "Advantages and disadvantages of pixel art",
-    "Scoping indie game projects"
+    "Scoping indie game projects",
+    "Freelancing in Game Development"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
     "https://80.lv/articles/interview-rpg-maker-u2u-lets-you-build-hd-2d-worlds-without-learning-3d/"
   ],
-  "category_index": 6,
+  "category_index": 7,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -80,14 +81,14 @@
     "mario.jpg",
     "hfw.jpg",
     "control.jpg",
-    "bf41.jpg",
-    "pokemon.jpg",
-    "gearsofwar.jpg",
-    "bf42.jpg",
     "spg.jpg",
+    "bf42.jpg",
+    "gearsofwar.jpg",
     "gowar.jpg",
+    "bf41.jpg",
+    "tes.jpg",
     "cod.jpg",
-    "tes.jpg"
+    "pokemon.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -103,7 +104,8 @@
       "6adb22e3b548d29b74038747",
       "6adc6df43d5b27036b74aa42",
       "6addc4056887a2efc1f7343b",
-      "6adf1f9ea4ca599b2445989c"
+      "6adf1f9ea4ca599b2445989c",
+      "6ae06ff8bb05e759120585e1"
     ]
   }
 }
