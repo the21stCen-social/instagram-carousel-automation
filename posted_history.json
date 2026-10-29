@@ -15,13 +15,14 @@
     "Advantages and disadvantages of pixel art",
     "Scoping indie game projects",
     "Freelancing in Game Development",
-    "The reality of game creation"
+    "The reality of game creation",
+    "Effective Game Development Playtesting"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
     "https://80.lv/articles/interview-rpg-maker-u2u-lets-you-build-hd-2d-worlds-without-learning-3d/"
   ],
-  "category_index": 0,
+  "category_index": 1,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -90,14 +91,14 @@
     "tes.jpg",
     "cod.jpg",
     "pokemon.jpg",
+    "g4.jpg",
+    "g8.jpg",
+    "g6.jpg",
+    "g1.jpg",
+    "g7.jpg",
     "g5.jpg",
     "g2.jpg",
-    "g8.jpg",
-    "g3.jpg",
-    "g7.jpg",
-    "g6.jpg",
-    "g4.jpg",
-    "g1.jpg"
+    "g3.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -115,7 +116,8 @@
       "6addc4056887a2efc1f7343b",
       "6adf1f9ea4ca599b2445989c",
       "6ae06ff8bb05e759120585e1",
-      "6ae1cbec5719a3c4c810e7d7"
+      "6ae1cbec5719a3c4c810e7d7",
+      "6ae322e242a28ed294020bb4"
     ]
   }
 }
