@@ -17,14 +17,15 @@
     "Freelancing in Game Development",
     "The reality of game creation",
     "Effective Game Development Playtesting",
-    "Modernizing Second Life Development"
+    "Modernizing Second Life Development",
+    "Unreal Engine Data Assets"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
     "https://80.lv/articles/interview-rpg-maker-u2u-lets-you-build-hd-2d-worlds-without-learning-3d/",
     "https://80.lv/articles/second-life-wants-its-23-year-old-world-to-be-a-modern-game-platform/"
   ],
-  "category_index": 2,
+  "category_index": 3,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -107,7 +108,15 @@
     "pixel=2.jpg",
     "pixel-8.png",
     "pixel-5.png",
-    "pixel-3.jpg"
+    "pixel-3.jpg",
+    "mc5.jpg",
+    "mc3.jpg",
+    "mc8.jpg",
+    "mc2.jpg",
+    "mc7.jpg",
+    "mc6.jpg",
+    "mc1.jpg",
+    "mc4.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -127,7 +136,8 @@
       "6ae06ff8bb05e759120585e1",
       "6ae1cbec5719a3c4c810e7d7",
       "6ae322e242a28ed294020bb4",
-      "6ae4746714812ff5967552c1"
+      "6ae4746714812ff5967552c1",
+      "6ae5be82eaa24d6f9a6a52ea"
     ]
   }
 }
