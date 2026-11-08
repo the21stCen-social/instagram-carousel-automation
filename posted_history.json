@@ -25,7 +25,8 @@
     "Game development portfolio building",
     "The Nature of Game Creation",
     "Improving code architecture through modularity",
-    "Market opportunities for women in gaming"
+    "Market opportunities for women in gaming",
+    "Using Unity ScriptableObjects"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
@@ -33,7 +34,7 @@
     "https://80.lv/articles/second-life-wants-its-23-year-old-world-to-be-a-modern-game-platform/",
     "https://www.gamesindustry.biz/its-such-a-massively-underserved-market-in-the-gaming-industry-the-creators-of-dressmaker-on-why-more-games-should-be-aimed-at-women"
   ],
-  "category_index": 2,
+  "category_index": 3,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -140,12 +141,12 @@
     "fh7.jpg",
     "fh5.jpg",
     "dmc3.jpg",
-    "dmc4.jpg",
-    "dmc1.jpg",
-    "dmc6.jpg",
     "dmc7.jpg",
+    "dmc6.jpg",
+    "dmc1.jpg",
     "dmc5.jpg",
-    "dmc2.jpg"
+    "dmc2.jpg",
+    "dmc4.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -173,7 +174,8 @@
       "6aeb1bea400b4e9be06bfb89",
       "6aec6d5f507ac1b75df716ee",
       "6aedbddf05414bc10aebcac0",
-      "6aef02c8af7e526d43171f35"
+      "6aef02c8af7e526d43171f35",
+      "6af05655229bf05dafa7a576"
     ]
   }
 }
