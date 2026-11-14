@@ -31,7 +31,8 @@
     "Self-Publishing versus Publisher Partnership",
     "Game Jam Strategy",
     "Game Development Networking Strategies",
-    "The paradox of game constraints"
+    "The paradox of game constraints",
+    "Game development documentation habits"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
@@ -39,7 +40,7 @@
     "https://80.lv/articles/second-life-wants-its-23-year-old-world-to-be-a-modern-game-platform/",
     "https://www.gamesindustry.biz/its-such-a-massively-underserved-market-in-the-gaming-industry-the-creators-of-dressmaker-on-why-more-games-should-be-aimed-at-women"
   ],
-  "category_index": 0,
+  "category_index": 1,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -151,13 +152,13 @@
     "dmc7.jpg",
     "dmc6.jpg",
     "dmc1.jpg",
+    "ac2.jpg",
     "ac3.jpg",
     "ac1.jpg",
+    "ac6.jpg",
     "ac0.jpg",
     "ac4.jpeg",
-    "ac6.jpg",
-    "ac5.jpg",
-    "ac2.jpg"
+    "ac5.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -191,7 +192,8 @@
       "6af30831cbbac94e1ea54be7",
       "6af4543f8bcfab418ea3c327",
       "6af5ac34a3fba876f6c15457",
-      "6af6f96a7828e7ae1b0857fe"
+      "6af6f96a7828e7ae1b0857fe",
+      "6af841f1d16af15d4d0dfb08"
     ]
   }
 }
