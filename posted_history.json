@@ -34,7 +34,8 @@
     "The paradox of game constraints",
     "Game development documentation habits",
     "Protecting IP from AI clones",
-    "Unity Component-Based Architecture"
+    "Unity Component-Based Architecture",
+    "The Principle of Information Hierarchy"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
@@ -43,7 +44,7 @@
     "https://www.gamesindustry.biz/its-such-a-massively-underserved-market-in-the-gaming-industry-the-creators-of-dressmaker-on-why-more-games-should-be-aimed-at-women",
     "https://www.gamesindustry.biz/how-to-protect-your-ip-against-the-army-of-ai-clones"
   ],
-  "category_index": 3,
+  "category_index": 4,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -169,7 +170,14 @@
     "ds1.jpg",
     "ds3.jpg",
     "ds7.jpg",
-    "ds0.jpg"
+    "ds0.jpg",
+    "got4.jpg",
+    "got5.jpg",
+    "got6.jpg",
+    "got0.jpg",
+    "got1.jpg",
+    "got3.jpg",
+    "got2.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -206,7 +214,8 @@
       "6af6f96a7828e7ae1b0857fe",
       "6af841f1d16af15d4d0dfb08",
       "6af99b11c5b364e062513250",
-      "6afaf5e7a0f4190dc3157e18"
+      "6afaf5e7a0f4190dc3157e18",
+      "6afc4c2abdb250961b945ac6"
     ]
   }
 }
