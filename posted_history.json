@@ -35,7 +35,8 @@
     "Game development documentation habits",
     "Protecting IP from AI clones",
     "Unity Component-Based Architecture",
-    "The Principle of Information Hierarchy"
+    "The Principle of Information Hierarchy",
+    "Solo versus team game development"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
@@ -44,7 +45,7 @@
     "https://www.gamesindustry.biz/its-such-a-massively-underserved-market-in-the-gaming-industry-the-creators-of-dressmaker-on-why-more-games-should-be-aimed-at-women",
     "https://www.gamesindustry.biz/how-to-protect-your-ip-against-the-army-of-ai-clones"
   ],
-  "category_index": 4,
+  "category_index": 5,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -173,10 +174,10 @@
     "ds0.jpg",
     "got4.jpg",
     "got5.jpg",
+    "got3.jpg",
+    "got1.jpg",
     "got6.jpg",
     "got0.jpg",
-    "got1.jpg",
-    "got3.jpg",
     "got2.jpg"
   ],
   "bot_posts": {
@@ -215,7 +216,8 @@
       "6af841f1d16af15d4d0dfb08",
       "6af99b11c5b364e062513250",
       "6afaf5e7a0f4190dc3157e18",
-      "6afc4c2abdb250961b945ac6"
+      "6afc4c2abdb250961b945ac6",
+      "6afd9bcc03c6b6e75e09a9ef"
     ]
   }
 }
