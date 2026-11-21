@@ -38,7 +38,8 @@
     "The Principle of Information Hierarchy",
     "Solo versus team game development",
     "Finishing Indie Games",
-    "Game industry career entry skills"
+    "Game industry career entry skills",
+    "The Iterative Nature of Game Design"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
@@ -47,7 +48,7 @@
     "https://www.gamesindustry.biz/its-such-a-massively-underserved-market-in-the-gaming-industry-the-creators-of-dressmaker-on-why-more-games-should-be-aimed-at-women",
     "https://www.gamesindustry.biz/how-to-protect-your-ip-against-the-army-of-ai-clones"
   ],
-  "category_index": 7,
+  "category_index": 0,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -181,13 +182,13 @@
     "got1.jpg",
     "got2.jpg",
     "got0.jpg",
-    "ssdt2.jpg",
+    "ssdt1.jpg",
     "ssdt4.jpg",
     "ssdt6.jpg",
-    "ssdt5.jpg",
+    "ssdt0.jpg",
     "ssdt3.jpg",
-    "ssdt1.jpg",
-    "ssdt0.jpg"
+    "ssdt2.jpg",
+    "ssdt5.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -228,7 +229,8 @@
       "6afc4c2abdb250961b945ac6",
       "6afd9bcc03c6b6e75e09a9ef",
       "6afeeb1d2d4643e56c92e589",
-      "6b003cd577e195b722fdf678"
+      "6b003cd577e195b722fdf678",
+      "6b01885cd864a011054002b2"
     ]
   }
 }
