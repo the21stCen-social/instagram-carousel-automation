@@ -40,16 +40,18 @@
     "Finishing Indie Games",
     "Game industry career entry skills",
     "The Iterative Nature of Game Design",
-    "Effective Game Prototyping Habits"
+    "Effective Game Prototyping Habits",
+    "Unreal Engine 6 Architecture Changes"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
     "https://80.lv/articles/interview-rpg-maker-u2u-lets-you-build-hd-2d-worlds-without-learning-3d/",
     "https://80.lv/articles/second-life-wants-its-23-year-old-world-to-be-a-modern-game-platform/",
     "https://www.gamesindustry.biz/its-such-a-massively-underserved-market-in-the-gaming-industry-the-creators-of-dressmaker-on-why-more-games-should-be-aimed-at-women",
-    "https://www.gamesindustry.biz/how-to-protect-your-ip-against-the-army-of-ai-clones"
+    "https://www.gamesindustry.biz/how-to-protect-your-ip-against-the-army-of-ai-clones",
+    "https://www.gamesindustry.biz/unreal-engine-6-wont-include-blueprints-or-actor-gameplay-framework"
   ],
-  "category_index": 1,
+  "category_index": 2,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -189,7 +191,14 @@
     "ssdt5.jpg",
     "ssdt3.jpg",
     "ssdt6.jpg",
-    "ssdt4.jpg"
+    "ssdt4.jpg",
+    "er1.jpg",
+    "er2.jpg",
+    "er5.jpg",
+    "er6.jpg",
+    "er3.jpg",
+    "er4.jpg",
+    "er7.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -232,7 +241,8 @@
       "6afeeb1d2d4643e56c92e589",
       "6b003cd577e195b722fdf678",
       "6b01885cd864a011054002b2",
-      "6b02dcdd024796909249bf41"
+      "6b02dcdd024796909249bf41",
+      "6b06e7d69bfb1fde5bcbe480"
     ]
   }
 }
