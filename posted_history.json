@@ -41,7 +41,8 @@
     "Game industry career entry skills",
     "The Iterative Nature of Game Design",
     "Effective Game Prototyping Habits",
-    "Unreal Engine 6 Architecture Changes"
+    "Unreal Engine 6 Architecture Changes",
+    "Godot Node Composition"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
@@ -51,7 +52,7 @@
     "https://www.gamesindustry.biz/how-to-protect-your-ip-against-the-army-of-ai-clones",
     "https://www.gamesindustry.biz/unreal-engine-6-wont-include-blueprints-or-actor-gameplay-framework"
   ],
-  "category_index": 2,
+  "category_index": 3,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -192,13 +193,13 @@
     "ssdt3.jpg",
     "ssdt6.jpg",
     "ssdt4.jpg",
+    "er3.jpg",
+    "er7.jpg",
+    "er6.jpg",
+    "er4.jpg",
     "er1.jpg",
     "er2.jpg",
-    "er5.jpg",
-    "er6.jpg",
-    "er3.jpg",
-    "er4.jpg",
-    "er7.jpg"
+    "er5.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -242,7 +243,8 @@
       "6b003cd577e195b722fdf678",
       "6b01885cd864a011054002b2",
       "6b02dcdd024796909249bf41",
-      "6b06e7d69bfb1fde5bcbe480"
+      "6b06e7d69bfb1fde5bcbe480",
+      "6b0834c24554371a145f9c42"
     ]
   }
 }
