@@ -42,7 +42,8 @@
     "The Iterative Nature of Game Design",
     "Effective Game Prototyping Habits",
     "Unreal Engine 6 Architecture Changes",
-    "Godot Node Composition"
+    "Godot Node Composition",
+    "The Principle of Diegetic UI"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
@@ -52,7 +53,7 @@
     "https://www.gamesindustry.biz/how-to-protect-your-ip-against-the-army-of-ai-clones",
     "https://www.gamesindustry.biz/unreal-engine-6-wont-include-blueprints-or-actor-gameplay-framework"
   ],
-  "category_index": 3,
+  "category_index": 4,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -164,13 +165,6 @@
     "dmc7.jpg",
     "dmc6.jpg",
     "dmc1.jpg",
-    "ac2.jpg",
-    "ac3.jpg",
-    "ac1.jpg",
-    "ac6.jpg",
-    "ac0.jpg",
-    "ac4.jpeg",
-    "ac5.jpg",
     "ds5.jpg",
     "ds4.jpg",
     "ds2.jpg",
@@ -199,7 +193,14 @@
     "er4.jpg",
     "er1.jpg",
     "er2.jpg",
-    "er5.jpg"
+    "er5.jpg",
+    "ac5.jpg",
+    "ac3.jpg",
+    "ac1.jpg",
+    "ac6.jpg",
+    "ac4.jpeg",
+    "ac0.jpg",
+    "ac2.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -244,7 +245,8 @@
       "6b01885cd864a011054002b2",
       "6b02dcdd024796909249bf41",
       "6b06e7d69bfb1fde5bcbe480",
-      "6b0834c24554371a145f9c42"
+      "6b0834c24554371a145f9c42",
+      "6b098526049983dcfbc1c29c"
     ]
   }
 }
