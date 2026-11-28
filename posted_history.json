@@ -43,7 +43,8 @@
     "Effective Game Prototyping Habits",
     "Unreal Engine 6 Architecture Changes",
     "Godot Node Composition",
-    "The Principle of Diegetic UI"
+    "The Principle of Diegetic UI",
+    "Procedural generation in game design"
   ],
   "links": [
     "https://www.gamesindustry.biz/how-to-run-an-indie-game-studio-part-3-dealing-with-issues",
@@ -53,7 +54,7 @@
     "https://www.gamesindustry.biz/how-to-protect-your-ip-against-the-army-of-ai-clones",
     "https://www.gamesindustry.biz/unreal-engine-6-wont-include-blueprints-or-actor-gameplay-framework"
   ],
-  "category_index": 4,
+  "category_index": 5,
   "recent_backgrounds": [
     "e986beeb585ff0103c41b1c076d9af5b.webp",
     "ZJW4jdJASCeMadZP7ZV88w.webp",
@@ -195,12 +196,12 @@
     "er2.jpg",
     "er5.jpg",
     "ac5.jpg",
-    "ac3.jpg",
-    "ac1.jpg",
-    "ac6.jpg",
     "ac4.jpeg",
+    "ac3.jpg",
+    "ac6.jpg",
+    "ac2.jpg",
     "ac0.jpg",
-    "ac2.jpg"
+    "ac1.jpg"
   ],
   "bot_posts": {
     "instagram": [
@@ -246,7 +247,8 @@
       "6b02dcdd024796909249bf41",
       "6b06e7d69bfb1fde5bcbe480",
       "6b0834c24554371a145f9c42",
-      "6b098526049983dcfbc1c29c"
+      "6b098526049983dcfbc1c29c",
+      "6b0acbaf0f9559e0ce10910e"
     ]
   }
 }
